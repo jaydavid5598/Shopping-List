@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Grocery">
+
+    <EditText
+        android:id="@+id/itemToBuy"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/item_to_buy"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addToList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_list"
+        app:layout_constraintBottom_toBottomOf="@+id/moreAmount"
+        app:layout_constraintEnd_toEndOf="@+id/itemToBuy"
+        app:layout_constraintTop_toTopOf="@+id/moreAmount" />
+
+    <TextView
+        android:id="@+id/AmountCount"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="@+id/lessAmount"
+        app:layout_constraintStart_toEndOf="@+id/lessAmount"
+        app:layout_constraintTop_toTopOf="@+id/lessAmount" />
+
+    <Button
+        android:id="@+id/lessAmount"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lessAmount"
+        app:layout_constraintStart_toStartOf="@+id/itemToBuy"
+        app:layout_constraintTop_toBottomOf="@+id/itemToBuy" />
+
+    <Button
+        android:id="@+id/moreAmount"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/moreAmount"
+        app:layout_constraintBottom_toBottomOf="@+id/AmountCount"
+        app:layout_constraintStart_toEndOf="@+id/AmountCount"
+        app:layout_constraintTop_toTopOf="@+id/AmountCount" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroceryList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToList" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
